@@ -2,8 +2,8 @@ const express = require('express');
 
 const router = express.Router()
 
-router.get('/',()=>{
-
+router.get('/',(req,res)=>{
+res.json({msg : 'get all workouts'})
 })
 
 module.exports = router

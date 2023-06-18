@@ -1,4 +1,5 @@
 const express = require('express')
+const workoutRoutes = require('./routes/workout')
 
 //express app
 const app = express()
@@ -9,10 +10,8 @@ app.use((req,res,next)=>{
     next()
 })
 
-//get request
-app.get("/",(req,res)=>{
-        res.json({"massage" : "Hellooow"})
-})
+//routes
+app.use('/api/workouts',workoutRoutes)
 
 //listner
 app.listen(4000,()=>{
