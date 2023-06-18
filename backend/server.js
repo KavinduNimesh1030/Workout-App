@@ -5,10 +5,7 @@ const workoutRoutes = require('./routes/workout')
 const app = express()
 
 //midleware
-app.use((req,res,next)=>{
-    console.log(req.method,req.path)
-    next()
-})
+app.use(express.json()) 
 
 //routes
 app.use('/api/workouts',workoutRoutes)
