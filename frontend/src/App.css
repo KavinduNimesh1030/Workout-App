@@ -84,3 +84,11 @@
   background-color: #059cf3;
   border: none;
 }
+div.error{
+  padding: 10px;
+  border: 1px solid red;
+  color: #ffffff;
+  border-radius: 4px;
+  margin: 20px 0;
+  background-color: #f07c7c;
+}
