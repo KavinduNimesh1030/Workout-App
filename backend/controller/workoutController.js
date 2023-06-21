@@ -21,7 +21,6 @@ const getWorkout = async (req,res) =>{
 }
 
 //post a workout
-
 const createWorkout = async (req,res)=>{
     const {title,load,reps} = req.body
 
@@ -48,7 +47,7 @@ const updateWorkout = async (req,res) =>{
         if(!workout){
             return res.status(404).json({error : "no such workout"})
         }
-        res.status(200).json({msg : "deleted..!"})
+        res.status(200).json({msg : "updated..!"})
 
     }catch(error){
         res.status(400).json({error : error.message})
@@ -69,7 +68,7 @@ const deleteWorkout = async (req,res) =>{
         if(!workout){
             return res.status(404).json({error : "no such workout"})
         }
-        res.status(200).json({msg : "updated..!"})
+        res.status(200).json({msg : "deleted..!"})
 
     }catch(error){
         res.status(400).json({error : error.message})
