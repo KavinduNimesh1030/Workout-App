@@ -32,7 +32,7 @@
 }
 .workout-details{
   background-color: #ffffff;
-  width: 60%;
+  
   margin-left: 60px;
   border-radius: 20px;
   position: relative;
@@ -54,4 +54,33 @@
   font-weight: 500;
   margin-bottom: 2px;
   
+}
+.home{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.create{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.workouts{
+  width: 60%;
+ 
+}
+.create>input{
+  border: none;
+  height: 27px;
+  border-radius: 7px;
+}
+.btnsubmit{
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 25px;
+  width: 40%;
+  font-size: 0.7em;
+  margin-left: 60%;
+  background-color: #059cf3;
+  border: none;
 }
