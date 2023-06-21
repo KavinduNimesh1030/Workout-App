@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios';
 
+import WorkoutDetails from '../components/WorkoutDetails';
+
 const Home = () => {
 
     const [workouts ,setworkouts] = useState([]);
@@ -14,9 +16,8 @@ const Home = () => {
     
   return (
     <div className='home'>
-        <h2>Home</h2>
         {workouts && workouts.map((workout)=>(
-           <p key={workout._id} className='para'>{workout.title}{workout.reps}{workout.load}</p>
+            <WorkoutDetails key ={workout._id} workout = {workout}/>
         ))}
     </div>
   )
