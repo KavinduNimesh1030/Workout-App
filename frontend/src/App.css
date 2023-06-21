@@ -21,3 +21,11 @@
 .home>h2{
   margin-left: 60px;
 }
+.para{
+  background-color: #ffffff;
+  height: 100px;
+  width: 60%;
+  margin-left: 60px;
+  border-radius: 20px;
+  
+}
