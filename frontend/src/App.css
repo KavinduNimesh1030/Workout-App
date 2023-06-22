@@ -92,3 +92,15 @@ div.error{
   margin: 20px 0;
   background-color: #f07c7c;
 }
+.trashIcon{
+  color:  #99999b;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+  
+}

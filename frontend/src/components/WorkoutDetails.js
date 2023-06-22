@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const workoutdetails = ({workout}) => {
 
@@ -23,7 +25,8 @@ const workoutdetails = ({workout}) => {
       <p><storng>load : </storng>{workout.load}</p>
       <p><storng>Reps : </storng>{workout.reps}</p>
       <p><storng>Created at : </storng>{workout.createdAt}</p>
-      <button onClick={deleteWorkout}>delete</button>
+      <FontAwesomeIcon icon={faTrash} onClick={deleteWorkout} className='trashIcon'/>
+  
     </div>
   )
 }
