@@ -3,17 +3,26 @@ import Axios from 'axios';
 
 import WorkoutDetails from '../components/WorkoutDetails';
 import WorkoutForm from '../components/WorkoutForm';
+import { useWorkoutContext } from '../hooks/useWorkoutContext';
+import { json } from 'react-router-dom';
 
 const Home = () => {
 
-    const [workouts ,setworkouts] = useState([]);
+    //const [workouts ,setworkouts] = useState([]);
+    const{workouts,dispatch} = useWorkoutContext()
 
     useEffect(() => {
-        Axios.get("http://localhost:4000/api/workouts/").then((response)=>{
-         console.log(response.data);
-            setworkouts(response.data);
-        })
-       }, []);
+        const fetchWorkouts = async () => {
+            const response = await fetch('/api/workouts')
+            const json = await response.json()
+      
+            if (response.ok) {
+              dispatch({type: 'SET_WORKOUTS', payload: json})
+            }
+          }
+      
+          fetchWorkouts()
+        }, [dispatch])
     
   return (
     <div className='home'>
