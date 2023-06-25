@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const workoutdetails = ({workout}) => {
 
@@ -24,7 +25,7 @@ const workoutdetails = ({workout}) => {
       <h4>{workout.title}</h4>
       <p><storng>load : </storng>{workout.load}</p>
       <p><storng>Reps : </storng>{workout.reps}</p>
-      <p><storng>Created at : </storng>{workout.createdAt}</p>
+      <p>{formatDistanceToNow(new Date(workout.createdAt),{addSuffix:true})}</p>
       <FontAwesomeIcon icon={faTrash} onClick={deleteWorkout} className='trashIcon'/>
   
     </div>
